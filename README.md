@@ -32,13 +32,15 @@ This script is made spacifically for Arch Linux but should work on any Arch base
 ## Installation
 
 ```
-  # 1. ) Clone the dotfiles inside ~/Downloads folder
-  git clone https://github.com/dianaw353/hyprland-starter.git ~/Downloads/hyprland-starter --depth=1
+  # 1. ) Clone the dotfiles inside ~ folder
+  cd ~
+  git clone https://github.com/dianaw353/hyprland-starter.git --depth=1
 
   # 2. ) cd into the hyprland starter
-  cd ~/Downloads/hyprland-starter
+  cd ~/hyprland-starter
 
   # 3. ) start the installation
+  chmod +x install.sh
   ./install.sh
 ```
 
