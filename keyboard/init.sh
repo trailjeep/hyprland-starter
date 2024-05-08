@@ -31,7 +31,7 @@ if [ "$restored" == "1" ]; then
 else
     _confirmKeyboard
     
-    cp .install/templates/keyboard.conf ~/dotfiles-versions/$version/hypr/conf/keyboard.conf
+    cp keyboard/keyboard.conf ~/dotfiles-versions/$version/hypr/conf/keyboard.conf
 
     SEARCH="KEYBOARD_LAYOUT"
     REPLACE="$keyboard_layout"
