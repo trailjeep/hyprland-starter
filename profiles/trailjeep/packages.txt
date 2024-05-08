@@ -60,6 +60,8 @@ swww
 thunar
 thunar-archive-plugin
 waybar
+wayclip
+waycorner
 wlogout
 xdg-desktop-portal-hyprland
 zsh
