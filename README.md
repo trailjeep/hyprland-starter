@@ -47,8 +47,8 @@ This script is made spacifically for Arch Linux but should work on any Arch base
 ## Update with GIT
 
 ```
-# 1.) Change into your Downloads folder
-cd ~/Downloads/hyprland-starter
+# 1.) Change into your hyprland-starter folder
+cd ~/hyprland-starter
 
 # Switch to rolling release
 # git checkout origin/main
