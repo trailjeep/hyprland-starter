@@ -34,7 +34,7 @@ This script is made spacifically for Arch Linux but should work on any Arch base
 ```
   # 1. ) Clone the dotfiles inside ~ folder
   cd ~
-  git clone https://github.com/dianaw353/hyprland-starter.git --depth=1
+  git clone https://github.com/trailjeep/hyprland-starter.git --depth=1
 
   # 2. ) cd into the hyprland starter
   cd ~/hyprland-starter
