@@ -47,9 +47,6 @@ neovim
 network-manager-applet
 networkmanager
 nm-connection-editor
-noto-fonts
-noto-fonts-emoji
-otf-font-awesome
 papirus-icon-theme
 pavucontrol
 playerctl
@@ -62,7 +59,6 @@ swappy
 swww
 thunar
 thunar-archive-plugin
-ttf-font-awesome
 waybar
 wlogout
 xdg-desktop-portal-hyprland
