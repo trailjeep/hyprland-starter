@@ -1,1 +1,15 @@
-
+com.github.tchx84.Flatseal
+fyi.zoey.Boop-GTK
+io.frama.tractor.carburetor
+io.freetubeapp.FreeTube
+io.github.flattool.Warehouse
+io.gitlab.zehkira.Monophony
+md.obsidian.Obsidian
+one.ablaze.floorp
+org.gimp.GIMP
+org.gnome.Calculator
+org.gnome.Mahjongg
+org.gnome.Sudoku
+org.libreoffice.LibreOffice
+org.torproject.torbrowser-launcher
+org.gnome.gitlab.cheywood.Buffer
