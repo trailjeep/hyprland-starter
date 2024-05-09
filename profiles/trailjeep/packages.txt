@@ -57,7 +57,7 @@ qt5ct
 qt6ct
 qt6-wayland
 rofi-lbonn-wayland-git
-rustup
+rust
 slurp
 starship
 swappy
