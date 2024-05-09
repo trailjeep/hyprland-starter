@@ -6,10 +6,38 @@ if gum confirm "Do you want to enable bluetooth service?"; then
   echo "Installing bluetooth dependencies..."
   sudo pacman -S --needed --noconfirm bluez bluez-utils
   echo "Enabling bluetooth service"
-  sudo systemctl start bluetooth.service
-  sudo systemctl enable bluetooth.service
+  sudo systemctl enable --now bluetooth.service
 else
   echo "Not enabling bluetooth service"
+fi
+
+if gum confirm "Do you want to enable Timeshift?"; then
+  echo "Installing Timeshift..."
+  sudo pacman -S --needed --noconfirm timeshift
+  echo "Enabling cronie service"
+  sudo systemctl enable --now cronie.service
+else
+  echo "Not enabling Timeshift"
+fi
+
+if gum confirm "Do you want to enable firewall?"; then
+  echo "Installing firewalld"
+  sudo pacman -S --needed --noconfirm firewalld
+  echo "Enabling firewalld service"
+  sudo systemctl enable --now firewalld.service
+else
+  echo "Not enabling firewall"
+fi
+
+if gum confirm "Do you want to enable printing?"; then
+  echo "Installing printing dependencies..."
+  sudo pacman -S --needed --noconfirm cups cups-browsed cups-filters cups-pdf foomatic-db-engine foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds foomatic-db-gutenprint-ppds ghostscript gsfonts gutenprint nss-mdns avahi
+  echo "Enabling avahi & cups services"
+  sudo systemctl enable --now avahi-daemon.service
+  sudo systemctl enable --now cups.socket
+  echo "Start cups.service to configure printers on localhost:631"
+else
+  echo "Not enabling printing service"
 fi
 
 echo "Current method of autostarting Hyprland is using greetd"
