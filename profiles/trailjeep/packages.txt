@@ -38,6 +38,7 @@ hyprpicker
 imagemagick
 jq
 kde-cli-tools
+kdeconnect
 kew
 kitty
 kitty-terminfo
