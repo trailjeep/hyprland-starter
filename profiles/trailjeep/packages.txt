@@ -97,6 +97,7 @@ rustup
 shortcut-pages-git
 shortcut-pages-extra-git
 shortcut-c-client-git
+skanlite
 slurp
 starship
 swappy
