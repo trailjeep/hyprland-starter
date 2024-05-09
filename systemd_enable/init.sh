@@ -40,6 +40,16 @@ else
   echo "Not enabling printing service"
 fi
 
+if gum confirm "Do you want to install zen kernel?"; then
+  echo "Installing zen kernel..."
+  sudo pacman -S --needed --noconfirm linux-zen linux-zen-headers
+  echo "Configure default kernel manually."
+else
+  echo "Not installing zen kernel"
+fi
+
+
+
 echo "Current method of autostarting Hyprland is using greetd"
 
 if gum confirm "Do you want to autostart hyprland upon system boot?"; then
