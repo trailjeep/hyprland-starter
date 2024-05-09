@@ -1,14 +1,19 @@
-packagesPacman=(
+bluetooth
+sudo systemctl enable bluetooth
 
-    "bat"
-wget curl
+timeshift
+pmi timeshift
+systemctl enable cronie.service
 
+zen
+linux-zen"
+    "linux-zen-headers"
+
+print / scan
     "cups"
     "cups-browsed"
     "cups-filters"
     "cups-pdf"
-     "duf"
-    "dust"
     "foomatic-db-engine"
     "foomatic-db"
     "foomatic-db-ppds"
@@ -18,89 +23,15 @@ wget curl
     "ghostscript"
      "gsfonts"
     "gutenprint"
-    "kcharselect"
-    "kde-cli-tools"
-    "kdeconnect"
-    "kservice5"
-    "kvantum"
-    "kvantum-qt5"
+skanlite
+nss-mdns
+avahi
+sudo sed -i 's/mymachines resolve/mymachines mdns_minimal [NOTFOUND=return] resolve/' /etc/nsswitch.conf
+sudo systemctl enable avahi-daemon.service
+sudo systemctl enable cups.socket
 
-    "linux-zen"
-    "linux-zen-headers"
-
-
-
-
-    "pacman-contrib"
-    "papirus-icon-theme"
-    "parallel"
-    "pavucontrol" 
-    "playerctl"
-    "polkit-gnome"
-    "procs"
-    "python-click" 
-    "python-pip" 
-    "python-psutil" 
-    "python-rich" 
-    "qalculate-gtk"
-    "qt5-imageformats"
-    "qt5-quickcontrols"
-    "qt5-quickcontrols2"
-    "qt5-graphicaleffects"
-    "qt5-wayland"
-    "qt6-wayland"
-    "qt5ct"
-    "qt6ct"
-    "ripgrep"
-    "rustup"
-    "skanlite"
-    "speedtest-cli"
-
-    "timeshift"
- 
-    "tumbler" 
-    "unzip"
-    "wavemon"
-    "wget"
-    "xarchiver"
-    "xdg-desktop-portal"
-    "xdg-desktop-portal-gtk"
-    "xdg-user-dirs"
-    "xorg-xhost"
-    "zip"
-    "zsh"
-    "pacman-contrib"
-);
-
-packagesYay=(
-    "asciiquarium-transparent-git"
-    "bibata-cursor-theme"
-    "btdu-bin"
-    "cava"
-    "cheat-bin"
-    "doggo"
-    "dua-cli"
-    "emote"
-    "hardinfo"
-    "kew"
-    "kvantum-theme-catppuccin-git"
-    "musikcube-bin"
-    "nnn-nerd"
-    "paccache-hook"
-    "pacseek"
-    "pfetch" 
-    "pyradio"
-    "python-pyamdgpuinfo"
-    "pywal-git"
-    "rofi-lbonn-wayland"
-    "shortcut-pages-git"
-    "shortcut-pages-extra-git"
-    "shortcut-c-client-git"
-    "trizen"
+kdeconnect
+pmi kdeconnect
 
 
 
-    "yaycache-hook"
-    "zathura"
-    "zathura-pdf-poppler"
-);
