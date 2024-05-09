@@ -1,7 +1,7 @@
 bat
 bottom
 btdu-bin
-cava
+cava-git
 cheat-bin
 doggo
 dua-cli
