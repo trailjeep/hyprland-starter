@@ -48,6 +48,29 @@ _installPackagesPacman() {
   fi
 }
 
+_installPackagesFlatpak() {
+  if [[ $(hash flatpak) ]]; then
+    local filepath="$1"
+    if [ ! -f "$filePath" ]; then
+      gum log --structured --level error "File not found: $(readlink -f "$filePath")"
+      return 1
+    fi
+    
+    while IFS= read -r pkg; do
+      echo "Installing $package"
+      if sudo flatpak install --assumeyes --noninteractive "$pkg"; then
+        gum log --structured --level debug "Successfully installed package $pkg"
+      else
+        gum log --structured --level error "Failed to install package $pkg"
+        return 1
+      fi
+    done < "$filePath"
+        
+  else
+    gum log --structured --level error "Flatpak not installed."
+  fi
+}
+
 _detectPackageManager() {
   local package_managers=("yay" "yay-bin" "yay-git" "aura" "aura-bin" "aura-git" "paru" "paru-bin" "paru-git")
   for package_manager in "${package_managers[@]}"; do
