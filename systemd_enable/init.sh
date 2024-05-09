@@ -48,7 +48,20 @@ else
   echo "Not installing zen kernel"
 fi
 
-
+if gum confirm "Do you want to install KVM / QEMU / VMM / Boxes?"; then
+  echo "Installing dependencies..."
+  sudo pacman -S --needed --noconfirm virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq vde2 bridge-utils iptables-nft dmidecode gnome-boxes
+  echo "Configuring..."
+  sudo usermod -aG libvirt "$(whoami)"
+  sudo usermod -aG kvm "$(whoami)"
+  sudo systemctl enable --now libvirtd.socket
+  sudo virsh net-autostart default
+  #sudo rmdir /var/lib/libvirt/images/
+  #sudo ln -s /mnt/VMs/libvirt/images/ /var/lib/libvirt/
+  echo "Start cups.service to configure printers on localhost:631"
+else
+  echo "Not installing KVM / QEMU / VMM / Boxes."
+fi
 
 echo "Current method of autostarting Hyprland is using greetd"
 
