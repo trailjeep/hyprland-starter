@@ -40,10 +40,17 @@ else
   echo "Not enabling printing service"
 fi
 
-if gum confirm "Do you want to install zen kernel?"; then
+if gum confirm "Do you want to switch to zen kernel?"; then
   echo "Installing zen kernel..."
   sudo pacman -S --needed --noconfirm linux-zen linux-zen-headers
-  echo "Configure default kernel manually."
+  sudo pacman -R --noconfirm linux linux-headers
+else
+  echo "Not installing zen kernel"
+fi
+
+if gum confirm "Do you want to add LTS kernel?"; then
+  echo "Installing LTS kernel..."
+  sudo pacman -S --needed --noconfirm linux-lts linux-lts-headers
 else
   echo "Not installing zen kernel"
 fi
