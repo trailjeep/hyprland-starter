@@ -6,6 +6,7 @@ echo "Installing dotfiles dependencies"
 _installPackageAur "profiles/trailjeep/packages.txt"
 _installPackageAur "profiles/trailjeep/fonts.txt"
 _installPackageAur "profiles/trailjeep/apps.txt"
+_installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
 cd ~/
 git clone --depth=1 https://github.com/dianaw353/starter-dotfile.git
 cd ~/starter-dotfile
