@@ -80,8 +80,8 @@ python-click
 python-pip
 python-psutil
 python-pyamdgpuinfo
-python-pywal
 python-rich
+pywal-git
 qalculate-gtk
 qt5-graphicaleffects
 qt5-imageformats
