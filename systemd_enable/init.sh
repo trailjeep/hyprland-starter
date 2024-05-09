@@ -58,7 +58,6 @@ if gum confirm "Do you want to install KVM / QEMU / VMM / Boxes?"; then
   sudo virsh net-autostart default
   #sudo rmdir /var/lib/libvirt/images/
   #sudo ln -s /mnt/VMs/libvirt/images/ /var/lib/libvirt/
-  echo "Start cups.service to configure printers on localhost:631"
 else
   echo "Not installing KVM / QEMU / VMM / Boxes."
 fi
