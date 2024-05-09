@@ -1,3 +1,4 @@
+bat
 bibata-cursor-theme
 blueman
 bottom
@@ -5,7 +6,12 @@ breeze-icons
 brightnessctl
 cava
 cliphist
+curl
+dua-cli
+duf
 dunst
+dust
+emote
 eza
 fastfetch
 fortune-mod
@@ -19,6 +25,7 @@ grim
 gtk4
 guvcview
 gvfs
+hardinfo
 htop
 hypridle
 hyprland
@@ -27,6 +34,7 @@ hyprpaper
 hyprpicker
 imagemagick
 jq
+kew
 kitty
 kitty-terminfo
 libadwaita
@@ -47,10 +55,13 @@ neovim
 network-manager-applet
 networkmanager
 nm-connection-editor
+pacman-contrib
+parallel
 papirus-icon-theme
 pavucontrol
 playerctl
 polkit-gnome
+procs
 python-pywal
 rofi-lbonn-wayland-git
 slurp
@@ -62,6 +73,10 @@ thunar-archive-plugin
 waybar
 wayclip
 waycorner
+wget
 wlogout
 xdg-desktop-portal-hyprland
+yaycache-hook
+zathura
+zathura-pdf-poppler
 zsh
