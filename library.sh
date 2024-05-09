@@ -57,7 +57,7 @@ _installPackagesFlatpak() {
     fi
     
     while IFS= read -r pkg; do
-      echo "Installing $package"
+      echo "Installing $pkg"
       if sudo flatpak install --assumeyes --noninteractive "$pkg"; then
         gum log --structured --level debug "Successfully installed package $pkg"
       else
