@@ -43,10 +43,10 @@ fi
 if gum confirm "Do you want to switch to zen kernel?"; then
   echo "Installing zen kernel..."
   sudo pacman -S --needed --noconfirm linux-zen linux-zen-headers
-  sudo sed -i 's/GRUB_DEFAULT=.*$/GRUB_DEFAULT=saved/' /etc/default/grub
-  sudo sed -i '/GRUB_DEFAULT=.*$/aGRUB_SAVEDEFAULT=true' /etc/default/grub
-  sudo sed -i 's/GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/' /etc/default/grub
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
+  #sudo sed -i 's/GRUB_DEFAULT=.*$/GRUB_DEFAULT=saved/' /etc/default/grub
+  #sudo sed -i '/GRUB_DEFAULT=.*$/aGRUB_SAVEDEFAULT=true' /etc/default/grub
+  #sudo sed -i 's/GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/' /etc/default/grub
+  #sudo grub-mkconfig -o /boot/grub/grub.cfg
 else
   echo "Not installing zen kernel"
 fi
