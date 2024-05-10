@@ -49,7 +49,7 @@ _installPackagesPacman() {
 }
 
 _installPackagesFlatpak() {
-  if [[ $(hash flatpak) ]]; then
+  if hash flatpak; then
     local filepath="$1"
     if [ ! -f "$filePath" ]; then
       gum log --structured --level error "File not found: $(readlink -f "$filePath")"
