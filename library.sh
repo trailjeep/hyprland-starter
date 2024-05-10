@@ -20,6 +20,16 @@ _UpdateSystemPackages() {
   fi
 }
 
+_isInstalledPacman() {
+    package="$1"
+    check="$(sudo pacman -Qs --color always "${package}" | grep "local" | grep "${package} ")"
+    if [ -n "${check}" ] ; then
+        return 0
+    else
+        return 1
+    fi
+}
+
 _installPackagesPacman() {
   local filePath="$1"
   if [ ! -f "$filePath" ]; then
