@@ -36,6 +36,7 @@ if gum confirm --default=false "Do you want to enable printing?"; then
   echo "Installing printing dependencies..."
   sudo pacman -S --needed --noconfirm cups cups-browsed cups-filters cups-pdf foomatic-db-engine foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds foomatic-db-gutenprint-ppds ghostscript gsfonts gutenprint nss-mdns avahi
   echo "Enabling avahi & cups services"
+  sudo sed -i 's/mymachines resolve/mymachines mdns_minimal [NOTFOUND=return] resolve/' /etc/nsswitch.conf
   sudo systemctl enable --now avahi-daemon.service
   sudo systemctl enable --now cups.socket
   sudo systemctl start cups.service
