@@ -1,4 +1,21 @@
 #!/bin/bash
+
+trap 'exit 1' INT
+trap 'kill 0' EXIT
+
+sudo_loop() {
+    while :; do
+        sleep 30
+        sudo -v &> /dev/null || break
+    done &
+}
+
+if sudo -v; then
+    sudo_loop
+else
+    exit 1
+fi
+
 version=$(cat .version/name)
 source ./library.sh
 
