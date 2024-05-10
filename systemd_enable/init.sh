@@ -43,17 +43,20 @@ fi
 if gum confirm "Do you want to switch to zen kernel?"; then
   echo "Installing zen kernel..."
   sudo pacman -S --needed --noconfirm linux-zen linux-zen-headers
-  sudo pacman -R --noconfirm linux linux-headers
+  sed -i 's/GRUB_DEFAULT=.*$/GRUB_DEFAULT=saved/' /etc/default/grub
+  sed -i '/GRUB_DEFAULT=.*$/aGRUB_SAVEDEFAULT=true' /etc/default/grub
+  sed -i 's/GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=2/' /etc/default/grub
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
 else
   echo "Not installing zen kernel"
 fi
 
-if gum confirm "Do you want to add LTS kernel?"; then
-  echo "Installing LTS kernel..."
-  sudo pacman -S --needed --noconfirm linux-lts linux-lts-headers
-else
-  echo "Not installing zen kernel"
-fi
+#if gum confirm "Do you want to add LTS kernel?"; then
+#  echo "Installing LTS kernel..."
+#  sudo pacman -S --needed --noconfirm linux-lts linux-lts-headers
+#else
+#  echo "Not installing zen kernel"
+#fi
 
 if gum confirm "Do you want to install KVM / QEMU / VMM / Boxes?"; then
   echo "Installing dependencies..."
