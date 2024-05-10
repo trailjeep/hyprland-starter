@@ -38,7 +38,8 @@ if gum confirm --default=false "Do you want to enable printing?"; then
   echo "Enabling avahi & cups services"
   sudo systemctl enable --now avahi-daemon.service
   sudo systemctl enable --now cups.socket
-  echo "Start cups.service to configure printers on localhost:631"
+  sudo systemctl start cups.service
+  echo "cups.service started to configure printers on localhost:631"
 else
   echo "Not enabling printing service"
 fi
