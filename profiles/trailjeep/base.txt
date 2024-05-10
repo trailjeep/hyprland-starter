@@ -1,0 +1,16 @@
+base-devel
+curl
+findutils
+git
+go
+nano
+pv
+rsync
+rust
+sed
+tldr
+unrar
+unzip
+vi
+wget
+xz
