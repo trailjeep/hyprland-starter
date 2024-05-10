@@ -61,7 +61,7 @@ fi
 #  echo "Not installing zen kernel"
 #fi
 
-if gum confirm --default=false "Do you want to install ZRAM service?"; then
+if gum confirm --default=false "Do you want to setup swap on ZRAM?"; then
   echo "Installing ZRAM..."
   # FIXME
   # yay -S --needed --noconfirm systemd-zram
