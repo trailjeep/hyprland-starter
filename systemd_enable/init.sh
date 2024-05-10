@@ -11,7 +11,7 @@ else
   echo "Not enabling bluetooth service"
 fi
 
-if gum confirm "Do you want to enable Timeshift?"; then
+if gum confirm --default=false "Do you want to enable Timeshift?"; then
   echo "Installing Timeshift..."
   sudo pacman -S --needed --noconfirm timeshift
   echo "Enabling cronie service"
@@ -20,7 +20,7 @@ else
   echo "Not enabling Timeshift"
 fi
 
-if gum confirm "Do you want to enable firewall?"; then
+if gum confirm --default=false "Do you want to enable firewall?"; then
   echo "Installing firewalld"
   if [[ $(pacman -Qq iptables) ]]; then
     sudo pacman -Rdd --noconfirm iptables
@@ -32,7 +32,7 @@ else
   echo "Not enabling firewall"
 fi
 
-if gum confirm "Do you want to enable printing?"; then
+if gum confirm --default=false "Do you want to enable printing?"; then
   echo "Installing printing dependencies..."
   sudo pacman -S --needed --noconfirm cups cups-browsed cups-filters cups-pdf foomatic-db-engine foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds foomatic-db-gutenprint-ppds ghostscript gsfonts gutenprint nss-mdns avahi
   echo "Enabling avahi & cups services"
@@ -43,7 +43,7 @@ else
   echo "Not enabling printing service"
 fi
 
-if gum confirm "Do you want to switch to zen kernel?"; then
+if gum confirm --default=false "Do you want to switch to zen kernel?"; then
   echo "Installing zen kernel..."
   sudo pacman -S --needed --noconfirm linux-zen linux-zen-headers
   #sudo sed -i 's/GRUB_DEFAULT=.*$/GRUB_DEFAULT=saved/' /etc/default/grub
@@ -54,14 +54,14 @@ else
   echo "Not installing zen kernel"
 fi
 
-#if gum confirm "Do you want to add LTS kernel?"; then
+#if gum confirm --default=false "Do you want to add LTS kernel?"; then
 #  echo "Installing LTS kernel..."
 #  sudo pacman -S --needed --noconfirm linux-lts linux-lts-headers
 #else
 #  echo "Not installing zen kernel"
 #fi
 
-if gum confirm "Do you want to install KVM / QEMU / VMM / Boxes?"; then
+if gum confirm --default=false "Do you want to install KVM / QEMU / VMM / Boxes?"; then
   echo "Installing dependencies..."
   sudo pacman -S --needed --noconfirm virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq vde2 bridge-utils iptables-nft dmidecode gnome-boxes
   echo "Configuring..."
