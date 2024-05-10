@@ -6,6 +6,7 @@ cliphist
 curl
 dunst
 fastfetch
+flatpak
 fortune-mod
 fuse2
 greetd
