@@ -61,6 +61,15 @@ fi
 #  echo "Not installing zen kernel"
 #fi
 
+if gum confirm --default=false "Do you want to install ZRAM service?"; then
+  echo "Installing ZRAM..."
+  # FIXME
+  # yay -S --needed --noconfirm systemd-zram
+  # sudo systemctl enable --now systemd-zram.service
+else
+  echo "Not installing ZRAM"
+fi
+
 if gum confirm --default=false "Do you want to install KVM / QEMU / VMM / Boxes?"; then
   echo "Installing dependencies..."
   sudo pacman -S --needed --noconfirm virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq vde2 bridge-utils iptables-nft dmidecode gnome-boxes
