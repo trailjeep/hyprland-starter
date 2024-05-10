@@ -34,7 +34,7 @@ EOF
 
 install_wine() {
   question="Do you want to install wine? It's a compatibility layer for running Windows applications on Linux."
-  if gum confirm "$question"; then
+  if gum confirm --default=false "$question"; then
     echo "Installing wine..."
     options=("amd" "intel" "nvidia")
     selected_brands=$(gum choose --no-limit "${options[@]}")
