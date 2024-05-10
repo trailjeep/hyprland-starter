@@ -22,7 +22,10 @@ fi
 
 if gum confirm "Do you want to enable firewall?"; then
   echo "Installing firewalld"
-  sudo pacman -S --needed --noconfirm firewalld
+  if [[ $(pacman -Qq iptables) ]]; then
+    sudo pacman -R iptables
+  fi
+  sudo pacman -S --needed --noconfirm firewalld python-pyqt5 python-capng
   echo "Enabling firewalld service"
   sudo systemctl enable --now firewalld.service
 else
