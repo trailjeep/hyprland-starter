@@ -82,7 +82,6 @@ fi
 if [ -d ~/dotfiles/wlogout ]; then
     _installSymLink wlogout ~/.config/wlogout ~/dotfiles/wlogout ~/.config
 fi
-mkdir ~/.cache
 if [ -d ~/dotfiles/.zshrc ]; then
   _installSymLink .zshrc ~/.zshrc ~/dotfiles/.zshrc ~/
 fi
@@ -92,8 +91,8 @@ fi
 if [ -d ~/dotfiles/wal ]; then
   _installSymLink .zsh_aliases ~/.zsh_aliases ~/dotfiles/.zsh_aliases ~/
 fi
-
+mkdir ~/.cache
 mkdir ~/Pictures/
 mkdir ~/Pictures/screenshots
 cd ~/hyprland-starter
-sudo chsh -s /bin/zsh
+chsh -s /bin/zsh
