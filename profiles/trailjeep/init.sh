@@ -3,7 +3,6 @@ source ./library.sh
 read -p "Press enter to continue install the dotfiles."
 echo "Downloading dotfiles"
 echo "Installing dotfiles dependencies"
-_installPackageAur "profiles/trailjeep/hypr.txt"
 _installPackageAur "profiles/trailjeep/packages.txt"
 _installPackageAur "profiles/trailjeep/fonts.txt"
 _installPackageAur "profiles/trailjeep/apps.txt"
