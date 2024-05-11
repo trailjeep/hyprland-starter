@@ -87,15 +87,18 @@ if [ -d ~/dotfiles/wal ]; then
   _installSymLink .zsh_aliases ~/.zsh_aliases ~/dotfiles/.zsh_aliases ~/
 fi
 
+echo "Creating common used directories"
+xdg-user-dirs-update
+mkdir ~/.cache
+mkdir ~/Pictures/
+mkdir ~/Pictures/screenshots
+
 echo "Installing packages"
 _installPackageAur "profiles/trailjeep/packages.txt"
 _installPackageAur "profiles/trailjeep/fonts.txt"
 _installPackageAur "profiles/trailjeep/apps.txt"
 _installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
 
-mkdir ~/.cache
-mkdir ~/Pictures/
-mkdir ~/Pictures/screenshots
 cd ~/hyprland-starter
 
 sudo chsh -s /bin/zsh "$(whoami)"
