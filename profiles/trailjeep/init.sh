@@ -8,44 +8,9 @@ _installPackageAur "profiles/trailjeep/fonts.txt"
 _installPackageAur "profiles/trailjeep/apps.txt"
 _installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
 cd ~/
-git clone --depth=1 https://github.com/dianaw353/starter-dotfile.git
-cd ~/starter-dotfile
-version=$(cat .version/version)
-echo "$version"
-echo "Copping dotfiles to $version"
-mkdir ~/dotfiles-versions
-mkdir ~/dotfiles-versions/$version
-cp -r ~/starter-dotfile/alacritty ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/gtk ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/hypr ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/dunst ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/rofi ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/scripts ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/starship ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/waybar ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/wlogout ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/.settings ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/.version ~/dotfiles-versions/$version/
-cp ~/starter-dotfile/update.sh ~/dotfiles-versions/$version/
-cp ~/starter-dotfile/.zshrc ~/dotfiles-versions/$version/
-cp ~/starter-dotfile/.zsh_aliases ~/dotfiles-versions/$version/
-cp -r ~/starter-dotfile/wal ~/dotfiles-versions/$version/wal
-mkdir ~/dotfiles
-cp -r ~/starter-dotfile/alacritty ~/dotfiles/
-cp -r ~/starter-dotfile/hypr ~/dotfiles/
-cp -r ~/starter-dotfile/gtk ~/dotfiles/
-cp -r ~/starter-dotfile/dunst ~/dotfiles/
-cp -r ~/starter-dotfile/rofi ~/dotfiles/
-cp -r ~/starter-dotfile/scripts ~/dotfiles/
-cp -r ~/starter-dotfile/starship ~/dotfiles/
-cp -r ~/starter-dotfile/waybar ~/dotfiles/
-cp -r ~/starter-dotfile/wlogout ~/dotfiles/
-cp -r ~/starter-dotfile/.settings ~/dotfiles/
-cp -r ~/starter-dotfile/.version ~/dotfiles/
-cp ~/starter-dotfile/update.sh ~/dotfiles/
-cp ~/starter-dotfile/.zshrc ~/dotfiles/
-cp ~/starter-dotfile/.zsh_aliases ~/dotfiles/
-cp -r ~/starter-dotfile/wal ~/dotfiles/wal
+git clone https://github.com/dianaw353/starter-dotfile.git ~/dotfiles --depth=1
+cd ~/dotfiles
+
 # Installing GTK Files
 # Remove existing symbolic links
 gtk_symlink=0
