@@ -50,8 +50,8 @@ source ./hyprland_dependencies/init.sh
 source ./profiles/init.sh # rice and dotfiles dependencies:
 source ./systemd_enable/init.sh
 source ./keyboard/init.sh
-if gum confirm --affirmative="Laptop" --negative="Desktop" --default="Desktop" "Are you using a laptop or desktop?"; then
-    # Run other files if the user is using a laptop
+
+if gum confirm --default="no" "Is this a laptop?"; then
     echo "Running additional scripts to make this laptop usage."
     source ./qolfixes/init.sh
     source ./workarounds/init.sh
@@ -60,13 +60,11 @@ else
     echo "Running additional scripts for desktop usage."
     echo "Comming Soon"
 fi
-#source ./game_launchers/init.sh
-#source ./text_exitors/init.sh
-#source ./browsers/init.sh
-#source ./system_utilities/init.sh
+
 source ./wallpaper/init.sh
 source ./vm_support/init.sh
 source ./cleanup/init.sh
+
 figlet "Done"
 # ------------------------------------------------------
 # Reboot
