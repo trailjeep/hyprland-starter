@@ -100,7 +100,3 @@ mkdir ~/Pictures/screenshots
 cd ~/hyprland-starter
 
 sudo chsh -s /bin/zsh "$(whoami)"
-
-#sudo -u $(whoami) bash << _EOF_
-#chsh -s /bin/zsh
-#_EOF_
