@@ -99,6 +99,8 @@ mkdir ~/Pictures/
 mkdir ~/Pictures/screenshots
 cd ~/hyprland-starter
 
-sudo -u $(whoami) bash << _EOF_
-chsh -s /bin/zsh
-_EOF_
+sudo chsh -s /bin/zsh "$(whoami)"
+
+#sudo -u $(whoami) bash << _EOF_
+#chsh -s /bin/zsh
+#_EOF_
