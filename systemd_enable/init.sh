@@ -22,7 +22,7 @@ fi
 
 if gum confirm --default=false "Do you want to enable firewall?"; then
   echo "Installing firewalld"
-  if [[ $(pacman -Qq iptables) ]]; then
+  if _isInstalledPacman iptables; then
     sudo pacman -Rdd --noconfirm iptables
   fi
   sudo pacman -S --needed --noconfirm firewalld python-pyqt5 python-capng
@@ -30,6 +30,20 @@ if gum confirm --default=false "Do you want to enable firewall?"; then
   sudo systemctl enable --now firewalld.service
 else
   echo "Not enabling firewall"
+fi
+
+if ! _isInstalledPacman plocate; then
+  if gum confirm "Do you want to install plocate?"; then
+    echo "Installing plocate"
+    if _isInstalledPacman mlocate; then
+      sudo pacman -Rdd --noconfirm mlocate
+    fi
+    sudo pacman -S --needed --noconfirm plocate
+    echo "Enabling updatedb service"
+    sudo systemctl enable --now plocate-updatedb.timer
+  else
+    echo "Not installing plocate"
+  fi
 fi
 
 if gum confirm --default=false "Do you want to enable printing?"; then
