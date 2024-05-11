@@ -58,38 +58,38 @@ if [ "$gtk_overwrite" == "1" ] ;then
 fi
 
 echo "Installing dotfiles"
-if [ -d ~/dotfiles-versions/$version/alacritty ]; then
+if [ -d ~/dotfiles/alacritty ]; then
     _installSymLink alacritty ~/.config/alacritty ~/dotfiles/alacritty ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/hypr ]; then
+if [ -d ~/dotfiles/hypr ]; then
     _installSymLink hypr ~/.config/hypr ~/dotfiles/hypr ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/dunst ]; then
+if [ -d ~/dotfiles/dunst ]; then
     _installSymLink dunst ~/.config/dunst ~/dotfiles/dunst ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/rofi ]; then
+if [ -d ~/dotfiles/rofi ]; then
     _installSymLink rofi ~/.config/rofi ~/dotfiles/rofi ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/scripts ]; then
+if [ -d ~/dotfiles/scripts ]; then
     _installSymLink scripts ~/.config/scripts ~/dotfiles/scripts ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/starship ]; then
+if [ -d ~/dotfiles/starship ]; then
     _installSymLink starship ~/.config/starship ~/dotfiles/starship ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/waybar ]; then
+if [ -d ~/dotfiles/waybar ]; then
     _installSymLink waybar ~/.config/waybar ~/dotfiles/waybar ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/wlogout ]; then
+if [ -d ~/dotfiles/wlogout ]; then
     _installSymLink wlogout ~/.config/wlogout ~/dotfiles/wlogout ~/.config
 fi
 mkdir ~/.cache
-if [ -d ~/dotfiles-versions/$version/.zshrc ]; then
+if [ -d ~/dotfiles/.zshrc ]; then
   _installSymLink .zshrc ~/.zshrc ~/dotfiles/.zshrc ~/
 fi
-if [ -d ~/dotfiles-versions/$version/wal ]; then
+if [ -d ~/dotfiles/wal ]; then
   _installSymLink wal ~/.config/wal ~/dotfiles/wal ~/.config
 fi
-if [ -d ~/dotfiles-versions/$version/wal ]; then
+if [ -d ~/dotfiles/wal ]; then
   _installSymLink .zsh_aliases ~/.zsh_aliases ~/dotfiles/.zsh_aliases ~/
 fi
 
