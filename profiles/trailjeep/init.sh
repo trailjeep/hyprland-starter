@@ -1,12 +1,5 @@
 figlet "Trailjeep's Dotfiles"
 source ./library.sh
-read -p "Press enter to continue install the dotfiles."
-
-echo "Downloading packages"
-_installPackageAur "profiles/trailjeep/packages.txt"
-_installPackageAur "profiles/trailjeep/fonts.txt"
-_installPackageAur "profiles/trailjeep/apps.txt"
-_installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
 
 echo "Downloading dotfiles"
 cd ~/
@@ -93,6 +86,12 @@ fi
 if [ -d ~/dotfiles/wal ]; then
   _installSymLink .zsh_aliases ~/.zsh_aliases ~/dotfiles/.zsh_aliases ~/
 fi
+
+echo "Installing packages"
+_installPackageAur "profiles/trailjeep/packages.txt"
+_installPackageAur "profiles/trailjeep/fonts.txt"
+_installPackageAur "profiles/trailjeep/apps.txt"
+_installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
 
 mkdir ~/.cache
 mkdir ~/Pictures/
