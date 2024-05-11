@@ -93,8 +93,12 @@ fi
 if [ -d ~/dotfiles/wal ]; then
   _installSymLink .zsh_aliases ~/.zsh_aliases ~/dotfiles/.zsh_aliases ~/
 fi
+
 mkdir ~/.cache
 mkdir ~/Pictures/
 mkdir ~/Pictures/screenshots
 cd ~/hyprland-starter
-sudo usermod -s /bin/zsh $(whoami)
+
+sudo -u $(whoami) bash << _EOF_
+chsh -s /bin/zsh
+_EOF_
