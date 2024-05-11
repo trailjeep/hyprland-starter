@@ -1,12 +1,14 @@
-figlet "Diana Starter Dotfiles"
+figlet "Trailjeep's Dotfiles"
 source ./library.sh
 read -p "Press enter to continue install the dotfiles."
-echo "Downloading dotfiles"
-echo "Installing dotfiles dependencies"
+
+echo "Downloading packages"
 _installPackageAur "profiles/trailjeep/packages.txt"
 _installPackageAur "profiles/trailjeep/fonts.txt"
 _installPackageAur "profiles/trailjeep/apps.txt"
 _installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
+
+echo "Downloading dotfiles"
 cd ~/
 git clone https://github.com/dianaw353/starter-dotfile.git ~/dotfiles --depth=1
 cd ~/dotfiles
