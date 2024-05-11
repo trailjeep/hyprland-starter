@@ -31,11 +31,11 @@ if [ "$restored" == "1" ]; then
 else
     _confirmKeyboard
     
-    cp keyboard/keyboard.conf ~/dotfiles-versions/$version/hypr/conf/keyboard.conf
+    cp keyboard/keyboard.conf ~/dotfiles/hypr/conf/keyboard.conf
 
     SEARCH="KEYBOARD_LAYOUT"
     REPLACE="$keyboard_layout"
-    sed -i "s/$SEARCH/$REPLACE/g" ~/dotfiles-versions/$version/hypr/conf/keyboard.conf
+    sed -i "s/$SEARCH/$REPLACE/g" ~/dotfiles/hypr/conf/keyboard.conf
 
     echo ""
     echo ":: Keyboard setup updated successfully."
