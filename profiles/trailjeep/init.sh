@@ -92,7 +92,6 @@ fi
 if [ -d ~/dotfiles-versions/$version/wal ]; then
   _installSymLink .zsh_aliases ~/.zsh_aliases ~/dotfiles/.zsh_aliases ~/
 fi
-mkdir ~/Pictures/
-mkdir ~/Pictures/screenshots
-cd ~/hyprland-starter
+
+cd ~/
 sudo chsh -s /bin/zsh
