@@ -14,6 +14,7 @@ qt6-wayland
 rsync
 rust
 sed
+stow
 tldr
 unrar
 unzip
