@@ -89,10 +89,10 @@ fi
 
 cd ~/hyprland-starter
 echo "Creating common used directories"
-xdg-user-dirs-update
+#xdg-user-dirs-update
 mkdir ~/.cache
-mkdir ~/Pictures/
-mkdir ~/Pictures/screenshots
+#mkdir ~/Pictures/
+#mkdir ~/Pictures/screenshots
 
 echo "Installing packages"
 _installPackageAur "profiles/trailjeep/packages.txt"
