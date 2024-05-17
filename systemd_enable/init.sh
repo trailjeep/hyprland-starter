@@ -112,3 +112,8 @@ if gum confirm "Do you want to autostart hyprland upon system boot?"; then
 else
   echo "NOT autostarting hyprland upon system boot"
 fi
+
+# Misc
+if _isInstalledPacman baloo; then
+  balooctl6 disable # dolphin / gwenview dependency
+fi
