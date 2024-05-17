@@ -65,7 +65,7 @@ _installPackagesFlatpak() {
       gum log --structured --level error "File not found: $(readlink -f "$filePath")"
       return 1
     fi
-    
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     while IFS= read -r pkg; do
       echo "Installing $pkg"
       if sudo flatpak install --assumeyes --noninteractive "$pkg"; then
