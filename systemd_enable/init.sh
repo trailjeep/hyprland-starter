@@ -13,7 +13,7 @@ fi
 
 if gum confirm --default=false "Do you want to enable Timeshift?"; then
   echo "Installing Timeshift..."
-  sudo pacman -S --needed --noconfirm timeshift
+  sudo pacman -S --needed --noconfirm timeshift grub-btrfs
   echo "Enabling cronie service"
   sudo systemctl enable --now cronie.service
 else
