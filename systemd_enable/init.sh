@@ -114,6 +114,12 @@ else
 fi
 
 # Misc
+
+# reflector
+sudo sed -i 's/# --country .*$/--country US,CA/' /etc/xdg/reflector/reflector.conf
+sudo systemctl enable --now reflector.timer
+
+# kde dolphin / gwenview
 if _isInstalledPacman baloo; then
-  balooctl6 disable # dolphin / gwenview dependency
+  balooctl6 disable
 fi
