@@ -1,6 +1,5 @@
 bibata-cursor-theme
 blueman
-breeze-icons
 brightnessctl
 cliphist
 curl
@@ -18,11 +17,6 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
-kde-cli-tools
-kservice5
-kvantum
-kvantum-qt5
-kvantum-theme-catppuccin-git
 libadwaita
 libnotify
 libportal-gtk3
@@ -47,14 +41,8 @@ python-psutil
 python-pyamdgpuinfo
 python-rich
 pywal-git
-qt5-graphicaleffects
-qt5-imageformats
-qt5-quickcontrols
-qt5-quickcontrols2
-qt5-wayland
 qt5ct
 qt6ct
-qt6-wayland
 rofi-lbonn-wayland-git
 slurp
 starship
