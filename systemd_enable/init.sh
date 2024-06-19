@@ -115,6 +115,14 @@ fi
 
 # Misc
 
+# ucode
+cpu=$(cat /proc/cpuinfo | grep -m1 vendor_id | awk -F: '{print $2}' | tr 'A-Z' 'a-z')
+if [[ "$cpu" == *"amd"* ]]; then
+  sudo pacman -S --needed --noconfirm amd-ucode
+elif [[ "$cpu" == *"intel"* ]]; then
+  sudo pacman -S --needed --noconfirm intel-ucode
+fi
+
 # Flatpak
 sudo pacman -S --needed --noconfirm flatpak
 flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro --user
