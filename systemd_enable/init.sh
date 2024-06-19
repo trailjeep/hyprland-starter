@@ -115,6 +115,11 @@ fi
 
 # Misc
 
+# Flatpak
+sudo pacman -S --needed --noconfirm flatpak
+flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro --user
+sudo flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro
+
 # reflector
 sudo sed -i 's/# --country .*$/--country US,CA/' /etc/xdg/reflector/reflector.conf
 sudo systemctl enable --now reflector.timer
@@ -125,4 +130,14 @@ if _isInstalledPacman baloo; then
 fi
 
 # Mountpoints
-sudo mkdir /mnt/VMs /mnt/Public /mnt/"$USER" /mnt/eBooks /mnt/Movies /mnt/Music /mnt/Podcasts /mnt/TMP
+sudo mkdir /mnt/VMs /mnt/Public /mnt/"$USER" /mnt/eBooks /mnt/Movies /mnt/Music /mnt/Podcasts /mnt/TEMP
+
+# Issue
+cat << _EOF_ | sudo tee /etc/issue
+**************** WARNING **************
+\n is a secure system!       
+All activities are monitored!
+Unauthorized access prohibited!
+***************************************
+_EOF_
+
