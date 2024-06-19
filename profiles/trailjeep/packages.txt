@@ -31,7 +31,6 @@ pacman-contrib
 parallel
 papirus-icon-theme
 pavucontrol
-pfetch
 playerctl
 polkit-gnome
 procs
