@@ -1,4 +1,5 @@
 bat
+bc
 btdu-bin
 cava-git
 cheat-bin
