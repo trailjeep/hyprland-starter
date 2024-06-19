@@ -8,8 +8,6 @@ dunst
 fastfetch
 fortune-mod
 fuse2
-greetd
-greetd-tuigreet
 grim
 gtk4
 gvfs
