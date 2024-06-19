@@ -97,7 +97,6 @@ mkdir ~/.cache
 echo "Installing packages"
 _installPackageAur "profiles/trailjeep/packages.txt"
 _installPackageAur "profiles/trailjeep/fonts.txt"
-_installPackageAur "profiles/trailjeep/apps.txt"
 _installPackagesFlatpak "profiles/trailjeep/flatpak.txt"
 
 sudo chsh -s /bin/zsh "$(whoami)"
