@@ -104,7 +104,7 @@ echo "Current method of autostarting Hyprland is using greetd"
 
 if gum confirm "Do you want to autostart hyprland upon system boot?"; then
   echo "Installing greetd..."
-  sudo pacman -S --needed --noconfirm greetd
+  sudo pacman -S --needed --noconfirm greetd greetd-tuigreet
   current_user=$(whoami)
   sed -i "s|^user = \"diana\"|user = \"$current_user\"|" systemd_enable/config.toml
   sudo mv ~/hyprland-starter/systemd_enable/config.toml /etc/greetd
