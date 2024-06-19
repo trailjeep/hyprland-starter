@@ -53,6 +53,7 @@ wayclip
 waycorner
 wget
 wlogout
+wttrbar
 xarchiver
 xdg-desktop-portal-hyprland
 yaycache-hook
