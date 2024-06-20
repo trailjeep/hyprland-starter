@@ -9,6 +9,7 @@ cava-git
 cheat-bin
 cliphist
 curl
+detox
 dua-cli
 duf
 dunst
@@ -22,6 +23,8 @@ fwupd
 fzf
 gping
 graphicsmagick
+greetd
+greetd-tuigreet
 grim
 gtk4
 gtop
@@ -56,6 +59,7 @@ ncdu
 neovim
 network-manager-applet
 networkmanager
+nfs-utils
 nm-connection-editor
 nnn-nerd
 paccache-hook
@@ -80,6 +84,7 @@ qt5ct
 qt6ct
 ripgrep
 rofi-lbonn-wayland-git
+selectdefaultapplication-fork-git
 skanlite
 slurp
 starship
@@ -88,6 +93,7 @@ swww
 thunar
 thunar-archive-plugin
 tldr
+trizen
 tumbler
 waybar
 wayclip
