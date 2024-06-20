@@ -132,6 +132,11 @@ sudo flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --files
 sudo sed -i 's/# --country .*$/--country US,CA/' /etc/xdg/reflector/reflector.conf
 sudo systemctl enable --now reflector.timer
 
+# xdg-desktop-portal-gtk possible waybar conflict
+if _isInstalledPacman xdg-desktop-portal-gtk; then
+  sudo pacman -R xdg-desktop-portal-gtk
+fi
+
 # kde dolphin / gwenview
 if _isInstalledPacman baloo; then
   balooctl6 disable
