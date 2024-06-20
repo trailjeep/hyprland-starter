@@ -124,7 +124,7 @@ elif [[ "$cpu" == *"intel"* ]]; then
 fi
 
 # Flatpak
-sudo pacman -S --needed --noconfirm flatpak
+sudo pacman -S --needed --noconfirm flatpak gnome-software
 flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro --user
 sudo flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro
 
