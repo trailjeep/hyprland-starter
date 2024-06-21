@@ -1,4 +1,5 @@
 anyrun
+asciiquarium-transparent-git
 bat
 bc
 bibata-cursor-theme
@@ -87,12 +88,14 @@ rofi-lbonn-wayland-git
 selectdefaultapplication-fork-git
 skanlite
 slurp
+socat
 starship
 swappy
 swww
 thunar
 thunar-archive-plugin
 tldr
+tmatrix-git
 trizen
 tumbler
 waybar
