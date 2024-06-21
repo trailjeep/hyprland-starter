@@ -38,6 +38,9 @@ _installPackagesPacman() {
   fi
 
   while IFS= read -r pkg; do
+    if [[ "$pkg" = \#* ]]; then
+      continue
+    fi
     if pacman -Qs "$pkg" > /dev/null; then
       gum log --structured --level debug "The package $pkg is already installed."
     else
@@ -67,6 +70,9 @@ _installPackagesFlatpak() {
     fi
     sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     while IFS= read -r pkg; do
+      if [[ "$pkg" = \#* ]]; then
+        continue
+      fi
       echo "Installing $pkg"
       if sudo flatpak install --assumeyes --noninteractive "$pkg"; then
         gum log --structured --level debug "Successfully installed package $pkg"
@@ -99,6 +105,9 @@ _installPackageAur() {
 
   if [[ -n $package_manager ]]; then
     while IFS= read -r package; do
+      if [[ "$package" = \#* ]]; then
+        continue
+      fi
       gum log --structured --level debug "Checking if $package is already installed..."
       if ! pacman -Q $package >/dev/null 2>&1; then
         gum log --structured --level debug "Installing $package using $package_manager..."
