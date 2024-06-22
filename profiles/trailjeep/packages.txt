@@ -84,7 +84,7 @@ qalculate-gtk
 qt5ct
 qt6ct
 ripgrep
-rofi-lbonn-wayland-git
+rofi-lbonn-wayland-only-git
 selectdefaultapplication-fork-git
 skanlite
 slurp
