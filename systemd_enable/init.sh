@@ -142,6 +142,10 @@ if _isInstalledPacman baloo; then
   balooctl6 disable
 fi
 
+# informant
+sudo touch /var/lib/informant.dat
+sudo chmod a+w /var/lib/informant.dat
+
 # Mountpoints
 sudo mkdir /mnt/VMs /mnt/Public /mnt/"$USER" /mnt/eBooks /mnt/Movies /mnt/Music /mnt/Podcasts /mnt/TEMP
 
