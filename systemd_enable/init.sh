@@ -143,7 +143,9 @@ if _isInstalledPacman baloo; then
 fi
 
 # informant
+sudo groupadd informant
 sudo touch /var/lib/informant.dat
+sudo chown root:informant /var/lib/informant.dat
 sudo chmod a+w /var/lib/informant.dat
 
 # Mountpoints
