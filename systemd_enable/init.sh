@@ -14,6 +14,7 @@ fi
 if gum confirm --default=false "Do you want to enable Timeshift?"; then
   echo "Installing Timeshift..."
   sudo pacman -S --needed --noconfirm timeshift grub-btrfs
+  sudo cp ~/hyprland-starter/systemd_enable/timeshift-autosnap.conf /etc/timeshift-autosnap.conf
   echo "Enabling cronie service"
   sudo systemctl enable --now cronie.service
 else
