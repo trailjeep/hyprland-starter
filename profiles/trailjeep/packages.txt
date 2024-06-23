@@ -18,6 +18,7 @@ dust
 emote
 eza
 fastfetch
+ffmpeg
 fortune-mod
 fuse2
 fwupd
