@@ -95,6 +95,7 @@ swappy
 swww
 thunar
 thunar-archive-plugin
+timeshift-autosnap
 tldr
 tmatrix-git
 trizen
