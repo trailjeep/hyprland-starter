@@ -63,7 +63,6 @@ network-manager-applet
 networkmanager
 nfs-utils
 nm-connection-editor
-nnn-nerd
 paccache-hook
 pacman-contrib
 pacseek
@@ -111,4 +110,5 @@ xdg-desktop-portal-hyprland
 yaycache-hook
 zathura
 zathura-pdf-poppler
+yazi
 zsh
