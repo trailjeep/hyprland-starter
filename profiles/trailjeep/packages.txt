@@ -1,12 +1,10 @@
 anyrun
-asciiquarium-transparent-git
 bat
 bc
 bibata-cursor-theme
 blueman
 brightnessctl
 btdu-bin
-cava-git
 cheat-bin
 cliphist
 curl
@@ -95,8 +93,7 @@ swww
 thunar
 thunar-archive-plugin
 #timeshift-autosnap
-tldr
-tmatrix-git
+tealdeer
 trizen
 tumbler
 waybar
@@ -112,3 +109,8 @@ zathura
 zathura-pdf-poppler
 yazi
 zsh
+#
+# candy
+asciiquarium-transparent-git
+cava-git
+tmatrix-git
