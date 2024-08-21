@@ -1,6 +1,6 @@
 gnu-free-fonts
 noto-fonts
-noto-fonts-emoji
+#noto-fonts-emoji
 otf-font-awesome
 ttf-dejavu-nerd
 ttf-firacode-nerd
@@ -11,4 +11,4 @@ ttf-liberation-mono-nerd
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
 ttf-victor-mono-nerd
-#ttf-noto-emoji-monochrome
+ttf-noto-emoji-monochrome
