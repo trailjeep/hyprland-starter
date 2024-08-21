@@ -37,10 +37,13 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
+hyprwayland-scanner-git
 imagemagick
 jq
 kdeconnect
 kew
+khal
+khard
 kitty
 kitty-terminfo
 libadwaita
@@ -48,6 +51,7 @@ libnotify
 libportal-gtk3
 libportal-gtk4
 libportal-qt5
+lsof
 man-pages
 mc
 mediainfo
@@ -57,6 +61,7 @@ mtr
 musikcube-bin
 ncdu
 neovim
+netstata
 network-manager-applet
 networkmanager
 nfs-utils
@@ -72,6 +77,7 @@ polkit-gnome
 procs
 pyprland
 pyradio
+python-aiohttp-oauthlib # for vdirsyncer
 python-click
 python-pip
 python-psutil
@@ -96,6 +102,7 @@ thunar-archive-plugin
 tealdeer
 trizen
 tumbler
+vdirsyncer
 waybar
 wayclip
 waycorner
