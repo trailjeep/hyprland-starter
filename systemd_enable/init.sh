@@ -11,6 +11,7 @@ else
   echo "Not enabling bluetooth service"
 fi
 
+# FIXME ask cronie regardless
 if gum confirm --default=false "Do you want to enable Timeshift?"; then
   echo "Installing Timeshift..."
   sudo pacman -S --needed --noconfirm timeshift grub-btrfs
